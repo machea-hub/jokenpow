@@ -4,6 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kode+Mono:wght@400..700&display=swap" rel="stylesheet">
     <title>Jo Ken Po</title>
 </head>
 <body>
@@ -14,10 +17,13 @@
             <button id="rock" onclick="playHuman('rock')">&#x1F44A;</button>
             <button id="paper" onclick="playHuman('paper')">&#x1F590;</button>
             <button id="scissors" onclick="playHuman('scissors')">&#x270C;</button>
+            <button id="lizard" onclick="playHuman('lizard')">&#x1F98E;</button>
+            <button id="spock" onclick="playHuman('spock')">&#x1F596;</button>
         </div>
 
         <p class="result"></p>
 
+        <p class="tied">Empate: <span id="tied-score">0</span></p>
         <p class="your-score">Sua pontuação: <span id="my-score">0</span></p>
         <p class="machine-score">Pontuação da Alexa: <span id="machine-score">0</span></p>
     </div>

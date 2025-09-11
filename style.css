@@ -2,6 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: "Kode Mono", monospace;
 }
 
 body{
@@ -15,7 +16,7 @@ body{
 
 .container{
     padding: 20px;
-    background-color: #ffff;
+    background-color: #ffffffe6;
     border-radius: 10px;
     display: flex;
     flex-direction: column;
@@ -48,15 +49,23 @@ button:active{
 }
 
 #rock{
-    background-color:#a200ff ;
+    background-color: #8C9FB1 ;
 }
 
 #paper{
-    background-color: #9ee01a;
+    background-color: #465D76;
 }
 
 #scissors{
-    background-color: #7dbeed;
+    background-color: #4F8DD1;
+}
+
+#lizard{
+    background-color: #164B84;
+}
+
+#spock{
+    background-color: #002348;
 }
 
 p{
@@ -65,10 +74,76 @@ p{
     margin-bottom: 10px;
 }
 
-.your-score span{
+.tied span{
     color: #007599;
+}
+
+.your-score span{
+    color: #39FA1B;
 }
 
 .machine-score span{
     color: #b96900;
+}
+
+@media (max-width: 768px){
+    h1{
+        font-size: 28px;
+        text-align: center;
+    }
+
+    button{
+        font-size: 40px;
+        padding: 8px;
+        max-width: 70px;
+    }
+
+    p{
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 480px){
+   body{
+    background: url(./assets/fundo-mobile.jpg);
+    background-size: cover;
+   }
+   
+    h1{
+        font-size: 24px;
+    }
+
+    .buttons{
+        gap: 10px;
+    }
+
+    button{
+        font-size: 32px;
+        padding: 6px;
+        max-width: 60px;
+    }
+
+    #rock{
+    background-color: #D8C7D1 ;
+    }
+
+    #paper{
+        background-color: #8F6283;
+    }
+
+    #scissors{
+        background-color: #AE5397;
+    }
+
+    #lizard{
+        background-color: #A62985;
+    }
+
+    #spock{
+        background-color: #E600AC;
+    }
+
+    p{
+        font-size: 16px;
+    }
 }
