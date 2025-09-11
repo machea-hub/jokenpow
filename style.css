@@ -87,6 +87,11 @@ p{
 }
 
 @media (max-width: 768px){
+    body{
+        background: url(./assets/fundo-tablet.jpg);
+        background-size: cover;
+    }
+
     h1{
         font-size: 28px;
         text-align: center;
@@ -107,6 +112,10 @@ p{
    body{
     background: url(./assets/fundo-mobile.jpg);
     background-size: cover;
+   }
+
+   .container{
+    margin: 0 10px;
    }
    
     h1{
