@@ -7,12 +7,20 @@ tiedScoreNumber = 0;
 humanScoreNumber = 0;
 machineScoreNumber = 0;
 
+const GAME_OPTIONS = {
+    ROCK: "rock",
+    PAPER: "paper",
+    SCISSORS: "scissors",
+    LIZARD: "lizard",
+    SPOCK: "spock"
+}
+
 const playHuman = (humanChoice) => {
   playtTheGame(humanChoice, playMachine());
 };
 
 const playMachine = () => {
-  const choices = ["rock", "paper", "scissors", "lizard", "spock"];
+  const choices = [GAME_OPTIONS.ROCK, GAME_OPTIONS.PAPER, GAME_OPTIONS.SCISSORS, GAME_OPTIONS.LIZARD, GAME_OPTIONS.SPOCK];
   const randomNumber = Math.floor(Math.random() * 6);
 
   return choices[randomNumber];
@@ -26,15 +34,15 @@ const playtTheGame = (human, machine) => {
     tiedScore.innerHTML = tiedScoreNumber;
     result.innerHTML = "Deu empate";
   } else if (
-    (human === "paper" && machine === "rock") ||
-    (human === "rock" && machine === "scissors") ||
-    (human === "scissors" && machine === "paper") ||
-    (human === "rock" && machine === "lizard") ||
-    (human === "lizard" && machine === "spock") ||
-    (human === "scissors" && machine === "lizard") ||
-    (human === "lizard" && machine === "paper") ||
-    (human === "paper" && machine === "spock") ||
-    (human === "spock" && machine === "rock")
+    (human === GAME_OPTIONS.PAPER && machine === GAME_OPTIONS.ROCK) ||
+    (human === GAME_OPTIONS.ROCK && machine === GAME_OPTIONS.SCISSORS) ||
+    (human === GAME_OPTIONS.SCISSORS && machine === GAME_OPTIONS.PAPER) ||
+    (human === GAME_OPTIONS.ROCK && machine === GAME_OPTIONS.LIZARD) ||
+    (human === GAME_OPTIONS.LIZARD && machine === GAME_OPTIONS.SPOCK) ||
+    (human === GAME_OPTIONS.SCISSORS && machine === GAME_OPTIONS.LIZARD) ||
+    (human === GAME_OPTIONS.LIZARD && machine === GAME_OPTIONS.PAPER) ||
+    (human === GAME_OPTIONS.PAPER && machine === GAME_OPTIONS.SPOCK) ||
+    (human === GAME_OPTIONS.SPOCK && machine === GAME_OPTIONS.ROCK)
   ) {
     humanScoreNumber++
     humanScore.innerHTML = humanScoreNumber
